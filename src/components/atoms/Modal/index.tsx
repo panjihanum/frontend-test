@@ -11,7 +11,7 @@ interface ModalInterface {
 
 const Modal = ({ setIsOpen, onDelete, onCancel, children }: ModalInterface) => {
     return (
-        <div className={styles.darkBG} onClick={() => setIsOpen && setIsOpen(false)} >
+        <div className={styles.darkBG} >
             <div className={styles.centered}>
                 <div className={styles.modal}>
                     <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>

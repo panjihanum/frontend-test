@@ -109,7 +109,10 @@ const Home = () => {
 
     return (
         <Wrapper ref={wrapperRef}>
-            <Header openShopping={() => setIsOpenShopping(true)} />
+            <Header openShopping={() => {
+                document.body.style.overflow = "hidden";
+                setIsOpenShopping(true)
+            }} />
             <GridWrapper>
                 {_.map(planet, (data: PlanetAttributes) => (
                     <Button onClick={() => handleOpen(data)}>
@@ -119,7 +122,10 @@ const Home = () => {
             </GridWrapper>
             {loading ? <div className="mt-10 text-center">loading data ...</div> : ""}
 
-            {openShopping && <Modal setIsOpen={() => setIsOpenShopping(false)}>
+            {openShopping && <Modal setIsOpen={() => {
+                document.body.style.overflow = "auto"
+                setIsOpenShopping(false)
+            }}>
                 {_.map(shoppingPlanet, data => (
                     <Atoms.Box data={data} />
                 ))}

@@ -7,6 +7,8 @@
     transform: translate(-50%, -50%);
     position: fixed;
     z-index: 11;
+    overflow-x: hidden;
+    overflow-y: overlay;
 }
 
 .centered {
@@ -28,6 +30,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 1rem;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: overlay;
 }
 
 .modalHeader {
@@ -75,12 +80,12 @@
     border: none;
     font-size: 18px;
     color: #2c3e50;
-    background: white;
+    background: rgb(207, 207, 207);
     transition: all 0.25s ease;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 40px;
+    top: 20px;
     align-self: flex-end;
     margin-top: -7px;
     margin-right: -7px;
