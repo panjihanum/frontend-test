@@ -13,6 +13,7 @@ export interface PlanetAttributes {
   created: Date;
   edited: Date;
   url: string;
+  addAt?: Date;
 }
 
 export interface PlanetResponse {

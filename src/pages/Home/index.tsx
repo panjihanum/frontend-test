@@ -104,7 +104,7 @@ const Home = () => {
     }
 
     const addDataShopping = (data: PlanetAttributes) => {
-        setShoppingPlanet(_.concat(shoppingPlanet, data));
+        setShoppingPlanet(_.concat(shoppingPlanet, _.assign(data, { addAt: new Date() })));
     }
 
     return (
